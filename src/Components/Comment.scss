@@ -1,0 +1,19 @@
+.comment {
+  width: 700px;
+  height: 200px;
+  background: #161e28;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.line {
+  height: 20px;
+  width: 100%;
+  background:#283647;
+  margin-bottom: 20px;
+  border-radius: 500px;
+
+  &:nth-child(2){
+    width: 50%;
+  }
+}

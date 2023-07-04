@@ -1,0 +1,95 @@
+.reaction-container {
+  position: relative;
+  margin-top: 50px;
+}
+
+.reaction-icon-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reaction-icon {
+  width: 35px;
+  height: 35px;
+  background: #283647;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #007ad4;
+  }
+}
+
+.current-reaction {
+  width: 65px;
+  height: 35px;
+  background: #007ad4;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 0.2s forwards linear;
+}
+
+.reaction-bubble {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #283647;
+  border-radius: 500px;
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: scale(0);
+  transform-origin: top left;
+  opacity: 0;
+}
+
+.emoji {
+  width: 35px;
+  height: 35px;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: #3e4e61;
+    font-size: 25px;
+  }
+}
+
+.bubble-up {
+  animation: bubble-up 0.2s forwards linear;
+  @keyframes bubble-up {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.fade in {
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
