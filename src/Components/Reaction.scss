@@ -34,9 +34,8 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
-  &:hover{
+  &:hover {
     background: #0064ac;
-
   }
 }
 
@@ -55,6 +54,7 @@
   transform: scale(0);
   transform-origin: top left;
   opacity: 0;
+  visibility: none;
 }
 
 .emoji {
@@ -67,23 +67,22 @@
   font-size: 20px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  animation: float 0.5s linear;
   position: relative;
-  
-  &:nth-child(1){
+
+  &:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+
+  &:nth-child(4) {
     animation-delay: 0.9s;
-  }
-
-  &:nth-child(2){
-    animation-delay: 1.1s;
-  }
-
-  &:nth-child(3){
-    animation-delay: 1.3s;
-  }
-
-  &:nth-child(4){
-    animation-delay: 1.5s;
   }
 
   &:hover {
@@ -98,14 +97,13 @@
     0% {
       transform: scale(0);
       opacity: 0;
-    
+      visibility: none;
     }
 
     100% {
       transform: scale(1);
       opacity: 1;
-      
-
+      visibility: visible;
     }
   }
 }
@@ -122,18 +120,20 @@
   }
 }
 
-@keyframes float {
-  0% {
-    top: 0px;
-  }
+.float {
+  animation: float 0.5s forwards linear;
 
-  50%{
-    top: -10px;
-  }
+  @keyframes float {
+    0% {
+      top: 0px;
+    }
 
-  100% {
-    top: 0px;
+    50% {
+      top: -10px;
+    }
 
+    100% {
+      top: 0px;
+    }
   }
 }
-
