@@ -21,7 +21,7 @@ const Reaction = () => {
           }
         ></div>
         {currentReaction && (
-          <div className="current-reaction">{currentReaction}</div>
+          <div className="current-reaction" onClick={() => setCurrentReaction("") }>{currentReaction}</div>
         )}
       </div>
 
